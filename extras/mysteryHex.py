@@ -33,8 +33,8 @@ def figureOutMysteryHex(hexStr, hashDict={}):
    # These search terms are simple, self-explanatory terms.  We find them, flag
    # them and we're done.
    simpleList = []
-   simpleList.append(['f9beb4d9', 'MagicNum', 'Main network magic bytes (f9beb4d9)'])
-   simpleList.append(['fabfb5da', 'MagicNum', 'Test network magic bytes (fabfb5da)'])
+   simpleList.append(['0f68c6cb', 'MagicNum', 'Main network magic bytes (0f68c6cb)'])
+   simpleList.append(['a9c5ef92', 'MagicNum', 'Test network magic bytes (a9c5ef92)'])
    simpleList.append(['76657261636b', 'VERACK', 'Version acknowledgement message'])
    simpleList.append(['76657273696f6e', 'VersionMsg', 'Version declaration message'])
    simpleList.append(['61646472', 'AddressMsg', 'Address declaration message'])
