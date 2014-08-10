@@ -299,6 +299,8 @@ BLOCKCHAINS = {}
 BLOCKCHAINS['\xf9\xbe\xb4\xd9'] = "Main Network"
 BLOCKCHAINS['\xfa\xbf\xb5\xda'] = "Old Test Network"
 BLOCKCHAINS['\x0b\x11\x09\x07'] = "Test Network (testnet3)"
+BLOCKCHAINS['\x0f\x68\xc6\xcb'] = "Viacoin Main Network"
+BLOCKCHAINS['\xa9\xc5\xef\x92'] = "Viacoin Test Network"
 
 NETWORKS = {}
 NETWORKS['\x00'] = "Main Network"
@@ -306,8 +308,10 @@ NETWORKS['\x05'] = "Main Network"
 NETWORKS['\x6f'] = "Test Network"
 NETWORKS['\xc4'] = "Test Network"
 NETWORKS['\x34'] = "Namecoin Network"
-NETWORKS['\x47'] = "Main Network"
-NETWORKS['\x7f'] = "Test Network"
+NETWORKS['\x47'] = "Viacoin Main Network"
+NETWORKS['\x21'] = "Viacoin Main Network"
+NETWORKS['\x7f'] = "Viacoin Test Network"
+NETWORKS['\xc4'] = "Viacoin Test Network"
 
 # We disable wallet checks on ARM for the sake of resources (unless forced)
 DO_WALLET_CHECK = CLI_OPTIONS.forceWalletCheck or \
