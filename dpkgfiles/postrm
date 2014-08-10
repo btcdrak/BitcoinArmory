@@ -1,8 +1,11 @@
 #! /bin/bash
 set -e
-xdg-desktop-menu  uninstall /usr/share/applications/armory.desktop
-xdg-desktop-menu  uninstall /usr/share/applications/armorytestnet.desktop
-xdg-desktop-menu  uninstall /usr/share/applications/armoryoffline.desktop
+xdg-desktop-menu  uninstall /usr/share/applications/viacoinarmory.desktop
+xdg-desktop-menu  uninstall /usr/share/applications/viacoinarmorytestnet.desktop
+xdg-desktop-menu  uninstall /usr/share/applications/viacoinarmoryoffline.desktop
+xdg-desktop-menu  uninstall ~/.local/share/applications/viacoinarmory.desktop
+xdg-desktop-menu  uninstall ~/.local/share/applications/viacoinarmorytestnet.desktop
+xdg-desktop-menu  uninstall ~/.local/share/applications/viacoinarmoryoffline.desktop
 xdg-icon-resource uninstall --size 64 armoryicon
 xdg-icon-resource uninstall --size 64 armorytestneticon
 xdg-icon-resource uninstall --size 64 armoryofflineicon

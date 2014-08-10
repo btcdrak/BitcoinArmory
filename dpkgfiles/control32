@@ -1,12 +1,12 @@
-Source: armory
+Source: viacoinarmory
 Section: net
 Priority: extra
-Maintainer: Armory Technologies, Inc. <support@bitcoinarmory.com>
+Maintainer: Viacoin. <support@viacoin.org>
 Build-Depends: python (>= 2.6), debhelper (>= 7), pyqt4-dev-tools, swig, libqtcore4, libqt4-dev, python-qt4, python-dev, python-twisted, python-psutil
 Standards-Version: 3.8.3
-Homepage: http://www.bitcoinarmory.com
+Homepage: http://www.viacoin.org
 
-Package: armory
+Package: viacoinarmory
 Architecture: i386
 Depends: python (>= 2.6), python-qt4, python-twisted, python-psutil, xdg-utils, ${shlibs:Depends}
 Description: Advanced Bitcoin Wallet Management Software

@@ -27,7 +27,6 @@ def pwd():
    return os.getcwd()
 
 
-
 if pwd().split('/')[-1]=='dpkgfiles':
    cd('..')
 
@@ -54,8 +53,8 @@ with open('armoryengine/ArmoryUtils.py') as f:
          break
 
 
-pkgdir = 'armory-%s' % (vstr,)
-pkgdir_ = 'armory_%s' % (vstr,)
+pkgdir = 'viacoinarmory-%s' % (vstr,)
+pkgdir_ = 'viacoinarmory_%s' % (vstr,)
 
 if not vstr:
    print '***ERROR: Could not deduce version from ArmoryUtils.py. '
@@ -78,16 +77,9 @@ execAndWait('rm -f %s*' % pkgdir_)
 shutil.copytree(origDir, pkgdir)
 execAndWait('tar -zcf %s.tar.gz %s' % (pkgdir, pkgdir))
 cd(pkgdir)
-execAndWait('export DEBFULLNAME="Armory Technologies, Inc."; dh_make -s -e support@bitcoinarmory.com -f ../%s.tar.gz' % pkgdir)
+execAndWait('export DEBFULLNAME="Viacoin."; dh_make -s -e support@viacoin.org -f ../%s.tar.gz' % pkgdir)
 for f in dpkgfiles:
    shutil.copy('dpkgfiles/%s' % f, 'debian/%s' % f)
 
 # Finally, all the magic happens here
 execAndWait('dpkg-buildpackage -rfakeroot')
-
-
-
-
-
-
-

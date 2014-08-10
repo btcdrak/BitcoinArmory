@@ -20,35 +20,35 @@ clean :
 	rm -f pytest/*.pyc txjsonrpc/*.pyc jsonrpc/*.pyc txjsonrpc/web/*.pyc 
 
 install : all
-	mkdir -p $(DESTDIR)$(PREFIX)/share/armory/img
-	mkdir -p $(DESTDIR)$(PREFIX)/lib/armory/extras
-	mkdir -p $(DESTDIR)$(PREFIX)/lib/armory/bitcoinrpc_jsonrpc
-	mkdir -p $(DESTDIR)$(PREFIX)/lib/armory/txjsonrpc
-	mkdir -p $(DESTDIR)$(PREFIX)/lib/armory/txjsonrpc/web
-	mkdir -p $(DESTDIR)$(PREFIX)/lib/armory/ui
-	mkdir -p $(DESTDIR)$(PREFIX)/lib/armory/pytest
-	mkdir -p $(DESTDIR)$(PREFIX)/lib/armory/BitTornado/BT1
-	mkdir -p $(DESTDIR)$(PREFIX)/lib/armory/urllib3
+	mkdir -p $(DESTDIR)$(PREFIX)/share/viacoinarmory/img
+	mkdir -p $(DESTDIR)$(PREFIX)/lib/viacoinarmory/extras
+	mkdir -p $(DESTDIR)$(PREFIX)/lib/viacoinarmory/bitcoinrpc_jsonrpc
+	mkdir -p $(DESTDIR)$(PREFIX)/lib/viacoinarmory/txjsonrpc
+	mkdir -p $(DESTDIR)$(PREFIX)/lib/viacoinarmory/txjsonrpc/web
+	mkdir -p $(DESTDIR)$(PREFIX)/lib/viacoinarmory/ui
+	mkdir -p $(DESTDIR)$(PREFIX)/lib/viacoinarmory/pytest
+	mkdir -p $(DESTDIR)$(PREFIX)/lib/viacoinarmory/BitTornado/BT1
+	mkdir -p $(DESTDIR)$(PREFIX)/lib/viacoinarmory/urllib3
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	cp dpkgfiles/armory $(DESTDIR)$(PREFIX)/bin
-	chmod +x $(DESTDIR)$(PREFIX)/bin/armory
-	cp *.py *.so README $(DESTDIR)$(PREFIX)/lib/armory/
-	rsync -rupE armoryengine $(DESTDIR)$(PREFIX)/lib/armory/
-	rsync -rupE --exclude="img/.DS_Store" img $(DESTDIR)$(PREFIX)/share/armory/
-	cp extras/*.py $(DESTDIR)$(PREFIX)/lib/armory/extras
-	cp bitcoinrpc_jsonrpc/*.py $(DESTDIR)$(PREFIX)/lib/armory/bitcoinrpc_jsonrpc
-	cp -r txjsonrpc/*.py $(DESTDIR)$(PREFIX)/lib/armory/txjsonrpc
-	cp -r txjsonrpc/web/*.py $(DESTDIR)$(PREFIX)/lib/armory/txjsonrpc/web
-	cp ui/*.py $(DESTDIR)$(PREFIX)/lib/armory/ui
-	cp pytest/*.py $(DESTDIR)$(PREFIX)/lib/armory/pytest
-	cp -r urllib3/* $(DESTDIR)$(PREFIX)/lib/armory/urllib3
+	cp dpkgfiles/viacoinarmory $(DESTDIR)$(PREFIX)/bin
+	chmod +x $(DESTDIR)$(PREFIX)/bin/viacoinarmory
+	cp *.py *.so README $(DESTDIR)$(PREFIX)/lib/viacoinarmory/
+	rsync -rupE armoryengine $(DESTDIR)$(PREFIX)/lib/viacoinarmory/
+	rsync -rupE --exclude="img/.DS_Store" img $(DESTDIR)$(PREFIX)/share/viacoinarmory/
+	cp extras/*.py $(DESTDIR)$(PREFIX)/lib/viacoinarmory/extras
+	cp bitcoinrpc_jsonrpc/*.py $(DESTDIR)$(PREFIX)/lib/viacoinarmory/bitcoinrpc_jsonrpc
+	cp -r txjsonrpc/*.py $(DESTDIR)$(PREFIX)/lib/viacoinarmory/txjsonrpc
+	cp -r txjsonrpc/web/*.py $(DESTDIR)$(PREFIX)/lib/viacoinarmory/txjsonrpc/web
+	cp ui/*.py $(DESTDIR)$(PREFIX)/lib/viacoinarmory/ui
+	cp pytest/*.py $(DESTDIR)$(PREFIX)/lib/viacoinarmory/pytest
+	cp -r urllib3/* $(DESTDIR)$(PREFIX)/lib/viacoinarmory/urllib3
 	mkdir -p $(DESTDIR)$(PREFIX)/share/applications
-	cp BitTornado/*.py $(DESTDIR)$(PREFIX)/lib/armory/BitTornado
-	cp BitTornado/BT1/*.py $(DESTDIR)$(PREFIX)/lib/armory/BitTornado/BT1
-	cp default_bootstrap.torrent $(DESTDIR)$(PREFIX)/lib/armory
-	sed "s:python /usr:python $(PREFIX):g" < dpkgfiles/armory.desktop > $(DESTDIR)$(PREFIX)/share/applications/armory.desktop
-	sed "s:python /usr:python $(PREFIX):g" < dpkgfiles/armoryoffline.desktop > $(DESTDIR)$(PREFIX)/share/applications/armoryoffline.desktop
-	sed "s:python /usr:python $(PREFIX):g" < dpkgfiles/armorytestnet.desktop > $(DESTDIR)$(PREFIX)/share/applications/armorytestnet.desktop
+	cp BitTornado/*.py $(DESTDIR)$(PREFIX)/lib/viacoinarmory/BitTornado
+	cp BitTornado/BT1/*.py $(DESTDIR)$(PREFIX)/lib/viacoinarmory/BitTornado/BT1
+	cp default_bootstrap.torrent $(DESTDIR)$(PREFIX)/lib/viacoinarmory
+	#sed "s:python /usr:python $(PREFIX):g" < dpkgfiles/viacoinarmory.desktop > $(DESTDIR)$(PREFIX)/share/applications/viacoinarmory.desktop
+	#sed "s:python /usr:python $(PREFIX):g" < dpkgfiles/viacoinarmoryoffline.desktop > $(DESTDIR)$(PREFIX)/share/applications/viacoinarmoryoffline.desktop
+	#sed "s:python /usr:python $(PREFIX):g" < dpkgfiles/viacoinarmorytestnet.desktop > $(DESTDIR)$(PREFIX)/share/applications/viacoinarmorytestnet.desktop
 
 all-test-tools: all
 	$(MAKE) -C cppForSwig/gtest
