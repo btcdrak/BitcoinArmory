@@ -306,6 +306,8 @@ NETWORKS['\x05'] = "Main Network"
 NETWORKS['\x6f'] = "Test Network"
 NETWORKS['\xc4'] = "Test Network"
 NETWORKS['\x34'] = "Namecoin Network"
+NETWORKS['\x47'] = "Main Network"
+NETWORKS['\x7f'] = "Test Network"
 
 # We disable wallet checks on ARM for the sake of resources (unless forced)
 DO_WALLET_CHECK = CLI_OPTIONS.forceWalletCheck or \
